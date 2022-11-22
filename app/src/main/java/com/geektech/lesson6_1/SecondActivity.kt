@@ -1,5 +1,6 @@
 package com.geektech.lesson6_1
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.result.ActivityResultCallback
@@ -16,11 +17,15 @@ class SecondActivity : AppCompatActivity() {
 
         val ActivityResultLauncher = registerForActivityResult(
         ActivityResultContracts.GetContent(), ActivityResultCallback {
-                  binding.etSecond.setText(it)
+                  binding.etSecond.text
         })
 
         binding.btnSecond.setOnClickListener {
-            ActivityResultContracts.GetContent(this@SecondActivity, MainActivity::class.java))
+           // ActivityResultContracts.GetContent(this@SecondActivity, MainActivity::class.java))
+            intent=  Intent(this@SecondActivity,MainActivity::class.java)
+            intent?.getStringExtra("key");
+            setResult(RESULT_OK, intent);
+            finish();
         }
 
     }

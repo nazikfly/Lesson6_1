@@ -20,8 +20,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-            initClick()
-        }
+        initClick()
+    }
        fun initClick() {
         binding.btnFirst.setOnClickListener {
             intent = Intent(this@MainActivity, SecondActivity::class.java)
@@ -34,7 +34,6 @@ class MainActivity : AppCompatActivity() {
             } else {
                 intent.putExtra("key", binding.btnFirst.text.toString())
             }
-
         }
     }
 }
