@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondActivity">
+
+    <EditText
+        android:id="@+id/et_second"
+        android:layout_marginTop="@dimen/page_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="text"
+        android:gravity="center"
+        android:textSize="@dimen/text_size_24"
+        android:textColorHint="@color/purple_200"/>
+
+    <Button
+        android:id="@+id/btn_second"
+        android:layout_below="@+id/et_second"
+        android:layout_marginTop="@dimen/page_margin"
+        android:text="SecondActivity"
+        android:textColor="@color/teal_200"
+        android:textSize="@dimen/text_size_24"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>
